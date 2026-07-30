@@ -7,6 +7,7 @@ Portfolio exécutif et technique bilingue de **Anass Famame**, Senior IT Manager
 Le portfolio présente un profil de leadership IT complet :
 
 - vision exécutive, gouvernance, feuille de route, risques, investissements, prestataires et management ;
+- executive leadership with a CEO mindset focused on value, risk, ROI and growth ;
 - pilotage de 6 sites, architecture réseau multisite et segmentation VLAN ;
 - modèle d’architecture sécurisé et anonymisé pour les environnements multisites ;
 - cybersécurité, Fortinet, identité et Microsoft 365 ;
@@ -44,3 +45,5 @@ https://anassfamame.github.io/portfolio/
 
 - Email : `anass.famame@gmail.com`
 - LinkedIn : `https://www.linkedin.com/in/anass-famame/`
+
+- certifications structurées par domaines : cybersécurité/NGFW, réseaux, systèmes et cloud ;

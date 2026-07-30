@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anassfamame.github.io/portfolio/sitemap.xml

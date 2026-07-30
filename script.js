@@ -58,3 +58,117 @@
     document.querySelectorAll('.reveal').forEach((item) => item.classList.add('visible'));
   }
 })();
+
+
+// Portfolio security sec1
+(() => {
+  if (window.__portfolioSecurityInitialized) return;
+  window.__portfolioSecurityInitialized = true;
+
+  const toElement = (node) => {
+    if (node instanceof Element) return node;
+    return node?.parentElement || null;
+  };
+
+  const isCopyAllowed = (target) => {
+    const element = toElement(target);
+
+    return Boolean(
+      element?.closest(
+        [
+          "a",
+          "button",
+          "input",
+          "textarea",
+          "[data-copy-allowed]",
+          "#contact"
+        ].join(",")
+      )
+    );
+  };
+
+  const getProtectedSelection = () => {
+    const selection = window.getSelection();
+
+    if (!selection || selection.rangeCount === 0) {
+      return null;
+    }
+
+    const anchor = toElement(selection.anchorNode);
+    const focus = toElement(selection.focusNode);
+
+    return (
+      anchor?.closest(".copy-guard") ||
+      focus?.closest(".copy-guard") ||
+      null
+    );
+  };
+
+  const showProtectionNotice = () => {
+    let notice = document.querySelector(".copy-notice");
+
+    if (!notice) {
+      notice = document.createElement("div");
+      notice.className = "copy-notice";
+      notice.setAttribute("role", "status");
+      notice.setAttribute("aria-live", "polite");
+      document.body.appendChild(notice);
+    }
+
+    const isEnglish =
+      document.documentElement.dataset.lang === "en";
+
+    notice.textContent = isEnglish
+      ? "Protected content — reproduction requires prior authorization."
+      : "Contenu protégé — reproduction soumise à autorisation préalable.";
+
+    notice.classList.add("visible");
+
+    window.clearTimeout(showProtectionNotice.timeoutId);
+
+    showProtectionNotice.timeoutId = window.setTimeout(() => {
+      notice.classList.remove("visible");
+    }, 2200);
+  };
+
+  document.addEventListener("copy", (event) => {
+    if (isCopyAllowed(event.target)) return;
+
+    const protectedArea = getProtectedSelection();
+
+    if (!protectedArea) return;
+
+    event.preventDefault();
+    showProtectionNotice();
+  });
+
+  document.addEventListener("cut", (event) => {
+    if (isCopyAllowed(event.target)) return;
+
+    const protectedArea = getProtectedSelection();
+
+    if (!protectedArea) return;
+
+    event.preventDefault();
+    showProtectionNotice();
+  });
+
+  document.addEventListener("contextmenu", (event) => {
+    const element = toElement(event.target);
+
+    if (!element?.closest(".copy-guard")) return;
+    if (isCopyAllowed(element)) return;
+
+    event.preventDefault();
+    showProtectionNotice();
+  });
+
+  document.addEventListener("dragstart", (event) => {
+    const element = toElement(event.target);
+
+    if (!element?.closest(".copy-guard")) return;
+    if (isCopyAllowed(element)) return;
+
+    event.preventDefault();
+  });
+})();

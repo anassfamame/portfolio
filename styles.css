@@ -575,3 +575,85 @@ h1 {
   .cert-item { align-items: flex-start; }
   .cert-status { display: none; }
 }
+
+
+/* Portfolio security sec1 */
+
+/*
+ * Dissuasion contre la copie uniquement dans les sections
+ * Architecture, Projets et Certifications.
+ */
+.copy-guard {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Les liens, boutons et éléments explicitement autorisés
+ * restent sélectionnables.
+ */
+.copy-guard a,
+.copy-guard button,
+.copy-guard input,
+.copy-guard textarea,
+.copy-guard [data-copy-allowed],
+.copy-guard [data-copy-allowed] * {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+}
+
+/*
+ * La section Contact reste toujours sélectionnable.
+ * L’adresse anass.famame@gmail.com reste donc copiable.
+ */
+#contact,
+#contact *,
+a[href^="mailto:"],
+a[href^="mailto:"] * {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+}
+
+/* Empêche seulement le glisser-déposer des images protégées. */
+.copy-guard img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.copy-notice {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  width: min(390px, calc(100vw - 32px));
+  padding: 14px 18px;
+  border: 1px solid rgba(131, 245, 204, 0.38);
+  border-radius: 14px;
+  background: rgba(6, 16, 29, 0.97);
+  color: #f4f7fb;
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.5;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.copy-notice.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .copy-notice {
+    right: 16px;
+    bottom: 16px;
+  }
+}

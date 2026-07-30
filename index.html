@@ -2,6 +2,9 @@
 <html lang="fr" data-lang="fr">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'sha256-S9TVEmPVLaGYTY2KPsLHsEfthzkkm0jQ+CdpXwFO2Do='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://avatars.githubusercontent.com; connect-src 'self'; form-action 'self'; manifest-src 'self'; media-src 'none'; upgrade-insecure-requests;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio exécutif et technique d’Anass Famame, Senior IT Manager Leader et RSI : transformation IT, architecture multisite sécurisée, cybersécurité, Linux, VMware ESXi, Proxmox, Microsoft 365 et continuité d’activité.">
   <meta name="author" content="Anass Famame">
@@ -24,8 +27,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260730-4">
-  <script defer src="script.js?v=20260730-3"></script>
+  <link rel="stylesheet" href="styles.css?v=20260730-sec1">
+  <script defer src="script.js?v=20260730-sec1"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -85,7 +88,7 @@
           <p class="hero-lead" data-fr="Plus de 6 ans d’expérience à piloter les opérations, les risques, les infrastructures multisites, la cybersécurité et la continuité. Mon profil combine un CEO mindset, une gouvernance orientée valeur, une autorité technique forte et une capacité d’exécution terrain pour convertir l’IT en avantage opérationnel durable." data-en="6+ years leading operations, risk, multi-site infrastructure, cybersecurity and continuity. I combine a CEO mindset, value-driven governance, deep technical authority and hands-on delivery to turn IT into a sustainable operational advantage.">Plus de 6 ans d’expérience à piloter les opérations, les risques, les infrastructures multisites, la cybersécurité et la continuité. Mon profil combine un CEO mindset, une gouvernance orientée valeur, une autorité technique forte et une capacité d’exécution terrain pour convertir l’IT en avantage opérationnel durable.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projets"><span data-fr="Voir les projets stratégiques" data-en="View strategic projects">Voir les projets stratégiques</span><span aria-hidden="true">↘</span></a>
-            <a class="button button-secondary" href="mailto:anass.famame@gmail.com"><span data-fr="Échanger avec moi" data-en="Contact me">Échanger avec moi</span></a>
+            <a class="button button-secondary" href="mailto:anass.famame@gmail.com" data-copy-allowed><span data-fr="Échanger avec moi" data-en="Contact me">Échanger avec moi</span></a>
           </div>
           <div class="metrics" aria-label="Indicateurs professionnels" data-aria-fr="Indicateurs professionnels" data-aria-en="Professional indicators">
             <div><strong>6+</strong><span data-fr="années d’expérience" data-en="years of experience">années d’expérience</span></div>
@@ -132,7 +135,7 @@
       </div>
     </section>
 
-    <section class="section architecture-section" id="architecture">
+    <section class="section architecture-section copy-guard" id="architecture">
       <div class="container">
         <div class="section-header reveal">
           <div><p class="eyebrow" data-fr="Architecture sécurisée" data-en="Secure architecture">Architecture sécurisée</p><h2 data-fr="Une vision de référence pour exploiter plusieurs sites sans publier de détails sensibles." data-en="A reference view for operating multiple sites without publishing sensitive details.">Une vision de référence pour exploiter plusieurs sites sans publier de détails sensibles.</h2></div>
@@ -219,7 +222,7 @@
       </div>
     </section>
 
-    <section class="section projects-section" id="projets">
+    <section class="section projects-section copy-guard" id="projets">
       <div class="container">
         <div class="section-header reveal">
           <div><p class="eyebrow" data-fr="Projets sélectionnés" data-en="Selected projects">Projets sélectionnés</p><h2 data-fr="Des réalisations qui démontrent architecture, leadership et impact." data-en="Work that demonstrates architecture, leadership and impact.">Des réalisations qui démontrent architecture, leadership et impact.</h2></div>
@@ -274,7 +277,7 @@
     </section>
 
 
-    <section class="section certifications-section" id="certifications">
+    <section class="section certifications-section copy-guard" id="certifications">
       <div class="container">
         <div class="cert-hero reveal">
           <div class="cert-intro">
@@ -354,7 +357,7 @@
           <p data-fr="Disponible pour des opportunités à responsabilité en management IT, infrastructure, systèmes, réseaux, cybersécurité et transformation numérique. Les échanges détaillés peuvent se faire dans un cadre confidentiel adapté." data-en="Available for leadership opportunities in IT management, infrastructure, systems, networks, cybersecurity and digital transformation. Detailed discussions can take place in an appropriate confidential setting.">Disponible pour des opportunités à responsabilité en management IT, infrastructure, systèmes, réseaux, cybersécurité et transformation numérique. Les échanges détaillés peuvent se faire dans un cadre confidentiel adapté.</p>
         </div>
         <div class="contact-actions">
-          <a class="button button-light" href="mailto:anass.famame@gmail.com">anass.famame@gmail.com</a>
+          <a class="button button-light" href="mailto:anass.famame@gmail.com" data-copy-allowed>anass.famame@gmail.com</a>
           <a class="button button-ghost" href="https://www.linkedin.com/in/anass-famame/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           <a class="button button-ghost" href="https://github.com/anassfamame" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
@@ -364,7 +367,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 Anass Famame. @LEADERSHIP</p>
+      <p>© 2026 Anass Famame. Tous droits réservés. Reproduction ou redistribution interdite sans autorisation écrite.</p>
       <p data-fr="Conçu pour la clarté, la sécurité et l’impact." data-en="Designed for clarity, security and impact.">Conçu pour la clarté, la sécurité et l’impact.</p>
     </div>
   </footer>

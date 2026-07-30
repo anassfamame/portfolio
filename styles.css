@@ -239,3 +239,13 @@ h3 { font-size: 1.42rem; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Certifications */
+.certifications-section { background: #07131f; }
+.cert-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.cert-card { min-height: 205px; padding: 25px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018)); border-radius: var(--radius, 8px); }
+.cert-card > span { display: inline-flex; margin-bottom: 42px; color: var(--mint); font: 800 .64rem/1 Manrope, sans-serif; text-transform: uppercase; }
+.cert-card h3 { font-size: 1.05rem; line-height: 1.28; }
+.cert-card p { margin: 10px 0 0; color: var(--muted); font-size: .78rem; }
+@media (max-width: 1060px) { .cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 790px) { .cert-grid { grid-template-columns: 1fr; } .cert-card { min-height: auto; } }

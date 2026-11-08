@@ -1,6 +1,19 @@
 (() => {
   const root = document.documentElement;
   const langToggle = document.querySelector('.lang-toggle');
+  const themeToggle = document.querySelector('.theme-toggle');
+  const setTheme = (theme) => {
+    root.dataset.theme = theme;
+    if (themeToggle) {
+      themeToggle.textContent = theme === 'dark' ? '☀' : '☾';
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Activer le thème clair' : 'Activer le thème sombre');
+    }
+    try { localStorage.setItem('portfolio-theme', theme); } catch (_) {}
+  };
+  let initialTheme = 'dark';
+  try { initialTheme = localStorage.getItem('portfolio-theme') || 'dark'; } catch (_) {}
+  setTheme(initialTheme === 'light' ? 'light' : 'dark');
+  themeToggle?.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.primary-nav');
   const header = document.querySelector('.site-header');

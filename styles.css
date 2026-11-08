@@ -682,3 +682,113 @@ html[data-theme="light"] .achievements-section{background:#eaf1f7}html[data-them
 @media(max-width:1150px){.achievement-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.primary-nav{gap:9px}.primary-nav a{font-size:.69rem}}
 @media(max-width:760px){.achievement-grid{grid-template-columns:1fr}.achievement-card{padding:24px}.theme-toggle{min-width:36px;height:36px}}
 @media(prefers-reduced-motion:reduce){.achievement-card,.button,.project,.expertise-card{transition:none}}
+
+/* ═══════════ Portfolio v2 — Executive editorial design ═══════════ */
+:root{
+  --ink:#0b1424;--ink-2:#111f33;--panel:#15253c;--panel-2:#1a2b43;
+  --white:#f5f3ee;--muted:#afbac9;--line:rgba(233,228,217,.14);
+  --mint:#e5ad72;--mint-2:#efc18f;--blue:#8caed1;--light:#f5f3ee;
+  --light-ink:#182638;--light-muted:#556273;--radius:20px;
+  --shadow:0 35px 85px rgba(0,0,0,.24);
+  --container:1320px;
+}
+html{scroll-padding-top:105px}
+body{background:#0b1424;color:#f5f3ee;letter-spacing:-.005em}
+.section{padding:105px 0}
+.site-header{padding:16px 0;background:rgba(11,20,36,.96);border-bottom:1px solid rgba(233,228,217,.12);backdrop-filter:blur(25px)}
+.site-header.scrolled{background:rgba(11,20,36,.98);border-bottom-color:rgba(229,173,114,.28)}
+.nav-shell{gap:16px}
+.brand-mark{width:52px;height:52px;border-radius:15px;border:1px solid rgba(229,173,114,.52);color:#e5ad72;background:linear-gradient(145deg,#24354a,#101c2d);font-size:1rem}
+.brand-text strong{font-size:1.02rem;letter-spacing:-.04em}
+.brand-text small{color:#adb6c6;letter-spacing:.06em}
+.primary-nav{gap:16px}
+.primary-nav a{color:#d2dae4;font-size:.72rem;letter-spacing:.01em}
+.primary-nav a::after{background:#e5ad72;height:2px}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:9px;flex-shrink:0;min-width:123px;height:43px;padding:0 13px;border:1px solid rgba(229,173,114,.55);background:rgba(229,173,114,.11);color:#f2c896;border-radius:999px;font-size:.72rem;font-weight:800;white-space:nowrap;cursor:pointer;box-shadow:0 0 0 4px rgba(229,173,114,.04)}
+.theme-toggle:hover{background:rgba(229,173,114,.22)}
+.theme-icon{font-size:1.12rem}.lang-toggle{height:43px;min-width:47px;border-radius:999px;border-color:rgba(233,228,217,.24)}
+.hero{padding:85px 0 52px;background:radial-gradient(ellipse at 80% 28%,rgba(117,146,188,.19),transparent 45%),linear-gradient(145deg,#0b1424 30%,#111e30 100%)}
+.hero::before{opacity:.25;background-size:68px 68px}
+.hero-layout{grid-template-columns:minmax(0,1.22fr) minmax(330px,.78fr);gap:clamp(30px,5vw,85px);min-height:660px}
+.hero-copy{position:relative;z-index:1}
+.hero-copy h1{font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(2.95rem,5.15vw,5.8rem);line-height:1.08;letter-spacing:-.065em;max-width:820px;margin:25px 0}
+.hero-copy h1::first-line{color:#efc08c}
+.hero-lead{font-size:1.08rem;line-height:1.78;color:#cbd3dc;max-width:685px}
+.hero .eyebrow{color:#efc08c;letter-spacing:.12em;font-size:.68rem}
+.status-pill{padding:10px 16px;border-color:rgba(229,173,114,.3);background:rgba(229,173,114,.09);color:#f3d3ad}
+.status-pill>span:first-child,.live-dot{background:#e5ad72}
+.button{border-radius:13px;padding:14px 23px}
+.button-primary{background:#e5ad72!important;color:#172437!important;box-shadow:0 12px 32px rgba(229,173,114,.18)}
+.button-secondary{border-color:rgba(229,173,114,.4);color:#f4dfc7}
+.metrics{margin-top:48px;border-top:1px solid rgba(233,228,217,.16);padding-top:28px}
+.metrics strong{font-size:2rem;color:#e8b47b}
+.command-card{border:1px solid rgba(229,173,114,.26);border-radius:28px;padding:30px;background:linear-gradient(157deg,#1d3047,#102033 72%);box-shadow:0 32px 90px rgba(0,0,0,.35);transform:rotate(1deg)}
+.command-card:hover{transform:rotate(0deg);transition:transform .35s ease}
+.command-title>span{color:#e5ad72}.command-title h2{letter-spacing:-.04em}
+.core-node,.orbit{border-color:rgba(229,173,114,.55)}
+.tech-ribbon{border-top-color:rgba(229,173,114,.2)}
+.trust-strip{margin-top:50px;gap:25px;border-top:1px solid rgba(233,228,217,.15);border-bottom:1px solid rgba(233,228,217,.15);padding:22px 0;color:#b9c6d5}
+.section-header h2,.section-heading h2,.executive-banner h2,.contact-card h2{letter-spacing:-.045em;line-height:1.19}
+.eyebrow,.section-header .eyebrow,.section-heading .eyebrow{letter-spacing:.11em;text-transform:uppercase;color:#e5ad72}
+.section-light{background:#f5f3ee;color:#182638}
+.section-light p{color:#596777}.section-light .eyebrow{color:#a96730}
+.architecture-section,.leadership-section,.projects-section,.certifications-section,.stack-section{background:#0f1c2e}
+.executive-impact{background:#152338}
+.achievements-section{background:#f2eee7;color:#172538}
+.achievements-section .section-header h2{color:#172538}
+.achievements-section .section-header>p{color:#5d6979}
+.achievements-section .eyebrow{color:#ad6a34}
+.achievement-grid{gap:22px}
+.achievement-card{border-radius:19px;background:#fff!important;border:1px solid #e4dacf;box-shadow:0 20px 45px rgba(36,47,62,.07);padding:32px}
+.achievement-card:hover{border-color:#d3a375;box-shadow:0 30px 65px rgba(36,47,62,.13)}
+.achievement-card h3{color:#1b2a3e}
+.achievement-card p{color:#526171}
+.achievement-top{color:#aa6b36}
+.achievement-number{color:#c4864e}
+.achievement-tags span{border-color:#e4d1ba;background:#f9f3eb;color:#895a2f}
+.project,.expertise-card,.pillar,.cert-domain{border-radius:20px;border-color:rgba(229,173,114,.13)}
+.project-featured{background:linear-gradient(135deg,rgba(229,173,114,.12),rgba(99,127,172,.11))}
+.profile-badges span,.tags span,.project-stack span{border-radius:9px}
+.site-footer{background:#0b1424;border-top:1px solid rgba(229,173,114,.2)}
+/* Light theme — full-page surface and text adaptation */
+html[data-theme="light"]{--ink:#f7f5f0;--ink-2:#ffffff;--panel:#ffffff;--panel-2:#edf1f5;--white:#1b293b;--muted:#526475;--line:rgba(29,47,68,.15);--mint:#995b2c;--mint-2:#af7139;--blue:#456487;--light:#f7f5f0;--light-ink:#1b293b;--light-muted:#526475;color-scheme:light}
+html[data-theme="light"] body{background:#f7f5f0;color:#1b293b}
+html[data-theme="light"] .site-header,html[data-theme="light"] .site-header.scrolled{background:rgba(255,254,251,.97);border-color:#dedbd6}
+html[data-theme="light"] .brand-mark{background:#fff5e8;color:#995b2c;border-color:#d5b494}
+html[data-theme="light"] .brand-text small,html[data-theme="light"] .primary-nav a{color:#34485d}
+html[data-theme="light"] .theme-toggle{background:#fff1df;color:#8c5125;border-color:#cba57e}
+html[data-theme="light"] .lang-toggle{color:#203248;background:#fff;border-color:#d6dce3}
+html[data-theme="light"] .hero{background:radial-gradient(ellipse at 75% 10%,rgba(218,184,145,.24),transparent 46%),linear-gradient(145deg,#fbfaf7,#edeae3)}
+html[data-theme="light"] .hero-copy h1{color:#172637}
+html[data-theme="light"] .hero-copy h1::first-line{color:#a46b3b}
+html[data-theme="light"] .hero-lead{color:#526276}
+html[data-theme="light"] .status-pill{background:#fff5e6;color:#8c562b;border-color:#d9bd9d}
+html[data-theme="light"] .hero .eyebrow{color:#9a5f32}
+html[data-theme="light"] .button-secondary{color:#81522d;background:#fff;border-color:#d4b28d}
+html[data-theme="light"] .metrics{border-color:#d9d9d6}html[data-theme="light"] .metrics strong{color:#a46b3b}
+html[data-theme="light"] .command-card{background:linear-gradient(155deg,#fff,#eef2f4);border-color:#d9d8d4;box-shadow:0 32px 65px rgba(41,57,77,.12)}
+html[data-theme="light"] .command-card h2,html[data-theme="light"] .command-card strong{color:#233448}
+html[data-theme="light"] .command-title>span{color:#986136}
+html[data-theme="light"] .trust-strip{color:#617286;border-color:#d5d6d3}
+html[data-theme="light"] .architecture-section,html[data-theme="light"] .leadership-section,html[data-theme="light"] .projects-section,html[data-theme="light"] .certifications-section,html[data-theme="light"] .stack-section{background:#f0f2f4;color:#1b293b}
+html[data-theme="light"] .executive-impact{background:#e8edf1;color:#1b293b}
+html[data-theme="light"] .section:not(.section-light):not(.hero):not(.achievements-section) h2,
+html[data-theme="light"] .section:not(.section-light):not(.hero):not(.achievements-section) h3{color:#1b293b}
+html[data-theme="light"] .section:not(.section-light):not(.hero):not(.achievements-section) p{color:#536375}
+html[data-theme="light"] .project,html[data-theme="light"] .pillar,html[data-theme="light"] .expertise-card,html[data-theme="light"] .cert-domain,
+html[data-theme="light"] .blueprint-layer,html[data-theme="light"] .executive-scorecard article,html[data-theme="light"] .contact-card{background:#fff;border-color:#d9e0e6;color:#1b293b}
+html[data-theme="light"] .project h3,html[data-theme="light"] .expertise-card h3,html[data-theme="light"] .pillar h3{color:#182638}
+html[data-theme="light"] .project p,html[data-theme="light"] .expertise-card p,html[data-theme="light"] .pillar p{color:#596777}
+html[data-theme="light"] .achievements-section{background:#eae3d9}
+html[data-theme="light"] .achievement-card{background:#fff}
+html[data-theme="light"] .achievement-card h3{color:#1b293b}
+html[data-theme="light"] .achievement-card p{color:#526171}
+html[data-theme="light"] .site-footer{background:#e5e9ed;color:#26394e;border-color:#d4dce4}
+html[data-theme="light"] .site-footer p{color:#4b5e72}
+html[data-theme="light"] .contact-card .button-light{background:#182d43;color:#fff}
+html[data-theme="light"] .contact-card .button-ghost{color:#23384e}
+@media(max-width:1200px){.nav-shell{flex-wrap:wrap}.primary-nav{order:5;flex-basis:100%;justify-content:center;gap:22px}.theme-toggle{margin-left:auto}}
+@media(max-width:900px){.hero-layout{grid-template-columns:1fr;min-height:auto}.command-card{max-width:630px;margin:auto;transform:none}.hero{padding-top:55px}.hero-copy h1{font-size:clamp(2.7rem,8vw,5rem)}}
+@media(max-width:760px){.nav-shell{flex-wrap:nowrap}.primary-nav{order:initial;flex-basis:auto}.theme-toggle{min-width:44px;width:44px;padding:0}.theme-label{display:none}.hero{padding-top:38px}.hero-copy h1{font-size:clamp(2.35rem,10vw,3.8rem)}.achievement-grid{grid-template-columns:1fr}.section{padding:75px 0}}
+@media(max-width:390px){.brand-text small{display:none}.brand-mark{width:42px;height:42px}.theme-toggle{width:38px;min-width:38px}.nav-shell{gap:7px}}
+@media(prefers-reduced-motion:reduce){.command-card:hover{transform:none}}

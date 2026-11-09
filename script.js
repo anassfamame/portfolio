@@ -5,7 +5,14 @@
   const setTheme = (theme) => {
     root.dataset.theme = theme;
     if (themeToggle) {
-      themeToggle.textContent = theme === 'dark' ? '☀' : '☾';
+      const icon = themeToggle.querySelector('.theme-icon');
+      if (icon) icon.textContent = theme === 'dark' ? '☀' : '☾';
+      const label = themeToggle.querySelector('.theme-label');
+      if (label) {
+        label.dataset.fr = theme === 'dark' ? 'Mode clair' : 'Mode sombre';
+        label.dataset.en = theme === 'dark' ? 'Light mode' : 'Dark mode';
+        label.textContent = label.dataset[root.dataset.lang === 'en' ? 'en' : 'fr'];
+      }
       themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Activer le thème clair' : 'Activer le thème sombre');
     }
     try { localStorage.setItem('portfolio-theme', theme); } catch (_) {}
